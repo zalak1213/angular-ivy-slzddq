@@ -7,4 +7,18 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
+  itemList:string;
+  images:Array<string> = [];
+  
+  
+
+  
+  addVell(xyz){
+    this.images.push(xyz);
+
+  }
+  RemoveItem(item: any){
+     this.images.splice(this.images.indexOf(item),1);
+  }
+
 }

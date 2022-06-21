@@ -1,4 +1,10 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<h1>Add image</h1>
+  <input type="text" [(ngModel)] ="itemList" placeholder="add image url">
+  <button (click)="addVell(itemList)"> click me </button>
+  
+  <ul>
+    <li *ngFor="let img of images"> {{img}} --<button (click)="RemoveItem(img)">Remove</button>
+
+    </li> 
+  </ul>
